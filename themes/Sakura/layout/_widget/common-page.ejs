@@ -11,10 +11,27 @@
     </div>
   <% } %>
   <div id="content" class="site-content">
+    <!-- #post-## -->
+    <!-- 个人信息在下面什么鬼呀！！！！ -->
+    <section class="author-profile">
+      <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+        <a href="/about/" class="profile gravatar"><img src="<%- (theme.cdn || '') + theme.avatar%>" itemprop="image" alt="<%- theme.siteName %>" height="70" width="70"></a>
+        <!-- 在我网站上丑的要死，要打开把下面注释取消就行 -->
+        <!-- <div class="meta">
+          <span class="title">Author</span>
+          <h3 itemprop="name">
+          <a href="<%- theme.url%>" itemprop="url" rel="author"><%- theme.siteName %></a>
+          </h3>
+        </div>
+      </div> -->
+      <hr>
+      <p><i class="iconfont icon-write"></i><%- theme.description%></p>
+    </section>
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
       <%- post.content %>
       <!-- .entry-content -->
       <%- partial('_partial/comment') %>
+      <% if(theme.donate.enable){%>
       <div class="single-reward">
         <div class="reward-open">赏
           <div class="reward-main">
@@ -25,6 +42,7 @@
           </div>
         </div>
       </div>
+      <%}else{%><p></p><%}%>
       <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
       <footer class="post-footer">
         <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
@@ -36,19 +54,5 @@
         </div>
       </footer><!-- .entry-footer -->
     </article>
-      <!-- #post-## -->
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="<%- (theme.cdn || '') + theme.avatar%>" itemprop="image" alt="<%- theme.siteName %>" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="<%- theme.url%>" itemprop="url" rel="author"><%- theme.siteName %></a>
-            </h3>
-          </div>
-        </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i><%- theme.description%></p>
-      </section>
   </div><!-- #primary -->
 </div>

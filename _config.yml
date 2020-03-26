@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: hojun
+title: Jkkoi
 subtitle:
-description: 好少年光芒万丈
+description: 一条咸鱼
 keywords:
-author: hojun
+author: Jkkoi
 language: zh-cn
 timezone:
 
@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: /
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory

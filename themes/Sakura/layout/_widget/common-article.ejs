@@ -10,19 +10,55 @@
       <h1 class="entry-title">
       <%- post.title %></h1>
       <p class="entry-census">
-        <span>
-          <a href="<%- post.authorLink%>">
-            <img src="<%- post.avatar%>">
-          </a>
-        </span>
-        <span>
-          <a href="<%- post.authorLink%>"><%- post.author %></a>
-        </span>
+        <%  if (post.author && post.avatar && post.author.length > 0 && post.avatar.length > 0){%>
+          <!-- 文章中配置了其他作者 -->
+          <% if (post.authorLink && post.authorLink.length >0){%>
+            <!-- 配置了外作者链接 -->
+            
+            <span>
+              <a href="<%- post.authorLink%>"><img src="<%- post.avatar%>"></a>
+            </span>
+            <span>
+              <a href="<%- post.authorLink%>"><%- post.author %></a>
+            </span>
+            
+            
+            <%}else{%>
+            <!-- 未配置外作者链接 -->
+
+            <span>
+              <a><img src="<%- post.avatar%>"></a>
+            </span>
+            <span>
+              <a><%- post.author %></a>
+            </span>
+
+            <%}
+          
+          
+          %>
+
+        <%}else{%>
+          <!-- 文章中没有配置其他作者，使用主题变量 -->
+          <span>
+            <a><img src="<%- theme.avatar%>"></a>
+          </span>
+          <span>
+            <a><%- theme.author %></a>
+          </span>
+
+
+
+        <%}%>
+
         <span class="bull">
         ·</span>
         <%= date(post.date, 'YYYY-M-D') %><span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+        </span>
+        <% if(theme.busuanzi.enable){%>
+          ·<span id="busuanzi_value_page_pv"></span>次阅读</p>
+      <%}%>
+      
     </header>
   </div>
 <% } %>
@@ -44,6 +80,7 @@
           <%- post.content %>
         </div>
         <!-- .entry-content -->
+        <% if(theme.donate.enable){%>
         <div class="single-reward">
           <div class="reward-open">赏
             <div class="reward-main">
@@ -53,6 +90,9 @@
               </ul>
             </div>
           </div>
+        <%}else{%>
+          <p></p>
+            <%}%>
         </div>
         <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
         <footer class="post-footer">
@@ -110,6 +150,7 @@
         <% } %>
       </section>
       <%- partial('_partial/comment') %>
+      <!-- 暂时感觉没啥用，先注释掉
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
           <a href="<%- post.authorLink %>" class="profile gravatar"><img src="<%- post.avatar%>" itemprop="image" alt="<%- post.author %>" height="70" width="70"></a>
@@ -122,7 +163,7 @@
         </div>
         <hr>
         <p><i class="iconfont icon-write"></i><%- post.authorAbout%></p>
-      </section>
+      </section> -->
     </main><!-- #main -->
   </div><!-- #primary -->
 </div>
