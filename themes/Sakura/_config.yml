@@ -112,10 +112,22 @@ aplayer:
   volume: 0.7
   mutex: true
 
-# Valine
-valine: true
-v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
-v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
+# Valine 评论
+valine: false
+v_appId: 
+v_appKey: 
 
+
+#网页分享类
 busuanzi:
   enable: true
+
+
+
+#不填即为关闭
+# Google 
+GoogleAnalytics:
+  token: 
+#百度分析
+BaiduAnalytics:
+  token: 
