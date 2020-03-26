@@ -1,12 +1,12 @@
 ---
-layout: links
-title: links
+layout: friends
+title: friends
 date: 2018-12-19 23:11:06
 keywords: 友人帐
 description: 
 comments: true
 photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg
-links:
+friends:
   - group: 个人项目
     desc: 充分说明这家伙是条咸鱼 < (￣︶￣)>
     items:
