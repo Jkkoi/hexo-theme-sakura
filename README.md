@@ -4,6 +4,20 @@
 使用时请注意
 
 
+2020-3-27
+
+支持「数据文件」特性，方便更新
+
+食用方法：
+将 `themes/Sakura/_config.yml` 复制到 `source/_data/sakura.yml` 即可，后续主题配置都在 `source/_data/sakura.yml`
+
+快捷指令版
+ 
+ `cp themes/Sakura/_config.yml source/_data/sakura.yml`
+
+
+-------
+
 2020-3-26
 
 资源静态化

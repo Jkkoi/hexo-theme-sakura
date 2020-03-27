@@ -1,10 +1,10 @@
 <div class="blank" style="padding-top: 0px;"></div>
 <div id="content" class="site-content">
-  <% if (theme.notice) { %>
+  <% if (site.data.sakura.notice) { %>
   <div class="notice" style="margin-top:60px">
     <i class="iconfont icon-notification">
     </i>
-    <div class="notice-content"><%= theme.notice%></div>
+    <div class="notice-content"><%= site.data.sakura.notice%></div>
   </div>
   <% } %>
   <%- partial('_partial/startdash') %>

@@ -3,16 +3,16 @@
   <i class="fa fa-anchor" aria-hidden="true">
   </i>
   START:DASH!!</h1>
-  <% for (dash in theme.startdash) { %>
+  <% for (dash in site.data.sakura.startdash) { %>
   <div class="top-feature-v2">
     <div class="the-feature square from_left_and_right">
-      <a href="<%= theme.startdash[dash].url %>" target="_blank">
+      <a href="<%= site.data.sakura.startdash[dash].url %>" target="_blank">
         <div class="img">
-          <img src="<%- (theme.cdn || '') + theme.startdash[dash].img %>">
+          <img src="<%- (site.data.sakura.cdn || '') + site.data.sakura.startdash[dash].img %>">
         </div>
         <div class="info">
-          <h3><%= theme.startdash[dash].title %></h3>
-          <p><%= theme.startdash[dash].desc %></p>
+          <h3><%= site.data.sakura.startdash[dash].title %></h3>
+          <p><%= site.data.sakura.startdash[dash].desc %></p>
         </div>
       </a>
     </div>

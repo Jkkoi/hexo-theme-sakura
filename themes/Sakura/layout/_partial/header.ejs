@@ -4,8 +4,8 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono"><%= theme.prefixName %></span>
-            <span class="shironeko"><%= theme.siteName %></span>
+            <span class="sakurasono"><%= site.data.sakura.prefixName %></span>
+            <span class="shironeko"><%= site.data.sakura.siteName %></span>
           </a>
         </span>
       </span>
@@ -26,20 +26,20 @@
       <div class="lower">
         <nav class="mobile-fit-control hide">
           <ul id="menu-new" class="menu">
-            <% for (var menu in theme.menus){ %>
+            <% for (var menu in site.data.sakura.menus){ %>
               <li>
-                <a href="<%- url_for(theme.menus[menu].path) %>">
+                <a href="<%- url_for(site.data.sakura.menus[menu].path) %>">
                   <span class="faa-parent animated-hover">
-                    <i class="fa  <%= theme.menus[menu].fa %>" aria-hidden="true"></i>
+                    <i class="fa  <%= site.data.sakura.menus[menu].fa %>" aria-hidden="true"></i>
                     <%= menu %>
                   </span>
                 </a>
-                <% if (theme.menus[menu].submenus) { %>
+                <% if (site.data.sakura.menus[menu].submenus) { %>
                   <ul class="sub-menu">
-                    <% for (var submenu in theme.menus[menu].submenus){ %>
+                    <% for (var submenu in site.data.sakura.menus[menu].submenus){ %>
                       <li>
-                        <a href="<%- url_for(theme.menus[menu].submenus[submenu].path) %>">
-                          <i class="fa <%= theme.menus[menu].submenus[submenu].fa %>" aria-hidden="true"></i>
+                        <a href="<%- url_for(site.data.sakura.menus[menu].submenus[submenu].path) %>">
+                          <i class="fa <%= site.data.sakura.menus[menu].submenus[submenu].fa %>" aria-hidden="true"></i>
                           <%= submenu %>
                         </a>
                       </li>

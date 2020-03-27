@@ -1,5 +1,5 @@
 <!-- <footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
+  <% if (site.data.sakura.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
   <% } %>
   <div class="outer">
@@ -40,14 +40,14 @@
 <script src='/js/Valine.min.js'></script>
 <script src="/js/botui.js"></script>
 <!-- 不蒜子 网页计数器 -->
-<% if(theme.busuanzi.enable){ %><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><% } %>
+<% if(site.data.sakura.busuanzi.enable){ %><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><% } %>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
 <script type="text/javascript">
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.movies.url %>","name":"<%- theme.movies.name%>","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"<%- site.data.sakura.pjax %>","movies":{"url": "<%- site.data.sakura.movies.url %>","name":"<%- site.data.sakura.movies.name%>","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 } else {
-  var Poi = {"pjax":"<%- theme.pjax %>","movies":{"url": "<%- theme.movies.url %>","name":"<%- theme.movies.name%>","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"<%- site.data.sakura.pjax %>","movies":{"url": "<%- site.data.sakura.movies.url %>","name":"<%- site.data.sakura.movies.name%>","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 }
 /* ]]> */
 

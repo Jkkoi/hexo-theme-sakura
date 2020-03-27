@@ -21,12 +21,12 @@
   }
   %>
   <title itemprop="name"><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
-  <% if (theme.favicon){ %>
-    <link rel="shortcut icon" href="<%- theme.favicon %>">
+  <% if (site.data.sakura.favicon){ %>
+    <link rel="shortcut icon" href="<%- site.data.sakura.favicon %>">
   <% } %>
 
-  <meta name="description" content="<%= theme.seo.description %>" />
-  <meta name="keywords" content="<%= theme.seo.keywords %>" />
+  <meta name="description" content="<%= site.data.sakura.seo.description %>" />
+  <meta name="keywords" content="<%= site.data.sakura.seo.keywords %>" />
 
   <meta http-equiv="x-dns-prefetch-control" content="on">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
@@ -53,12 +53,12 @@
   mashiro_option.email_name = "";
   mashiro_option.cookie_version_control = "";
   mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "<%- theme.prefixName%><%- theme.siteName%>";
-  mashiro_option.author_name = "<%- theme.siteName%>";
-  mashiro_option.site_url = "<%- theme.url%>";
-  mashiro_option.v_appId = "<%= theme.v_appId %>";
-  mashiro_option.v_appKey = "<%= theme.v_appKey %>";
-  mashiro_option.mathjax = "<%= theme.mathjax %>";
+  mashiro_option.site_name = "<%- site.data.sakura.prefixName%><%- site.data.sakura.siteName%>";
+  mashiro_option.author_name = "<%- site.data.sakura.siteName%>";
+  mashiro_option.site_url = "<%- site.data.sakura.url%>";
+  mashiro_option.v_appId = "<%= site.data.sakura.v_appId %>";
+  mashiro_option.v_appKey = "<%= site.data.sakura.v_appKey %>";
+  mashiro_option.mathjax = "<%= site.data.sakura.mathjax %>";
   mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
   mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
 
@@ -68,7 +68,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "<%= theme.bg%>".split(",");
+  var bg = "<%= site.data.sakura.bg%>".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -82,25 +82,25 @@
 
 
 
-<% if (theme.BaiduAnalytics.token && theme.BaiduAnalytics.token.length > 0 ){%>
+<% if (site.data.sakura.BaiduAnalytics.token && site.data.sakura.BaiduAnalytics.token.length > 0 ){%>
   <script>
   var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?<%- theme.BaiduAnalytics.token%>";
+    hm.src = "https://hm.baidu.com/hm.js?<%- site.data.sakura.BaiduAnalytics.token%>";
     var s = document.getElementsByTagName("script")[0]; 
     s.parentNode.insertBefore(hm, s);
   })();
   </script><%}%>
 
 
-  <% if (theme.GoogleAnalytics.token && theme.GoogleAnalytics.token.length > 0 ){%>
+  <% if (site.data.sakura.GoogleAnalytics.token && site.data.sakura.GoogleAnalytics.token.length > 0 ){%>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161712615-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '<%- theme.GoogleAnalytics.token%>');
+    gtag('config', '<%- site.data.sakura.GoogleAnalytics.token%>');
 </script><%}%>
 
 

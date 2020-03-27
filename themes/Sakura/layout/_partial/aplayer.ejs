@@ -1,4 +1,4 @@
-<% if (theme.aplayer.enable){%>
+<% if (site.data.sakura.aplayer.enable){%>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
   <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
   <!-- require MetingJS -->
@@ -30,8 +30,8 @@
     }
   </style>
   <meting-js
-  <% for (i in theme.aplayer) {%>
-      <%- i %>="<%- theme.aplayer[i] %>"
+  <% for (i in site.data.sakura.aplayer) {%>
+      <%- i %>="<%- site.data.sakura.aplayer[i] %>"
   <% } %>
   </meting-js>
   <script>

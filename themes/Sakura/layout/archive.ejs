@@ -20,7 +20,7 @@
                 全部展开/收缩</span>
               ]</p>
               <% var lastYear; var lastMonth; %>
-              <% site.posts.sort('date', theme.homePageSortType).each(function(post, i){ %>
+              <% site.posts.sort('date', site.data.sakura.homePageSortType).each(function(post, i){ %>
               <% var currentYear = parseInt(date(post.date, 'YYYY')); %>
               <% var currentMonth = parseInt(date(post.date, 'YYYYMM')); %>
               <% if (lastYear != currentYear){ %>
@@ -44,7 +44,7 @@
                           <%= post.title %>
                         </a>
                       </li>
-                      <% if (!site.posts.sort('date', theme.homePageSortType).eq(i + 1) || currentMonth != parseInt(date(site.posts.sort('date', theme.homePageSortType).eq(i + 1).date, 'YYYYMM'))){ %>
+                      <% if (!site.posts.sort('date', site.data.sakura.homePageSortType).eq(i + 1) || currentMonth != parseInt(date(site.posts.sort('date', site.data.sakura.homePageSortType).eq(i + 1).date, 'YYYYMM'))){ %>
                     </ul>
                   </li>
                 </ul>
