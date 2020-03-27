@@ -5,7 +5,7 @@ date: 2018-12-19 23:11:06
 keywords: 友人帐
 description: 
 comments: true
-photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg
+photos: /images/custom/banner/friends.jpg
 friends:
   - group: 个人项目
     desc: 充分说明这家伙是条咸鱼 < (￣︶￣)>

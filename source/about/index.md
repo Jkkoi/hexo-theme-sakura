@@ -4,7 +4,7 @@ date: 2018-12-12 22:14:36
 keywords: 关于
 description: 
 comments: false
-photos: /images/custom/about.jpg
+photos: /images/custom/banner/about.jpg
 ---
 <!-- {% raw %} -->
 <!-- 因为vue和botui更新导至bug,现将对话移至js下的botui中配置 -->
