@@ -14,9 +14,19 @@ comments: true
 tags: 
  - 建站
  - 博客
-keywords: Hexo
-description: 这事还得从一只蝙蝠🦇说起  #简介
 photos: /images/Build-a-station-with-hexo/handler.jpg  #封面图
+
+###############
+keywords: Hexos
+description: 这事还得从一只蝙蝠🦇说起  #简介,对应主页上的简介
+
+seodescription: 123
+seokeywords: Hexo,Theme
+#上面两个 seo 开头的内容是给搜索引擎做 seo 的，如果你不需要，可以不填或删除
+#搜索引擎拿到数据的顺序为： seodescription > description > sakura.seo.description(主题配置文件中)
+#keywords 同理
+
+
 ---
 
 test
