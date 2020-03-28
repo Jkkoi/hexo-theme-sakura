@@ -28,11 +28,9 @@
 
   <% if(page.seokeywords != undefined){%>
     <meta name="keywords" content="<%- page.seokeywords%>"/>
-      <%}else if(page.keywords != undefined){%>
-    <meta name="keywords" content="<%- page.keywords%>" />
-        <%}else{%>
+      <%}else{%>
     <meta name="keywords" content="<%- site.data.sakura.seo.keywords%>" />
-          <%}%>
+        <%}%>
   
 
 

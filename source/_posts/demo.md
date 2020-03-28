@@ -17,7 +17,6 @@ tags:
 photos: /images/Build-a-station-with-hexo/handler.jpg  #封面图
 
 ###############
-keywords: Hexos
 description: 这事还得从一只蝙蝠🦇说起  #简介,对应主页上的简介
 
 seodescription: 123

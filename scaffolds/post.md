@@ -9,7 +9,8 @@ authorDesc:
 categories: 
 comments: true
 tags: 
-keywords: 
-description: 
 photos: 
+description: 
+seokeywords:
+seodescription: 
 ---
