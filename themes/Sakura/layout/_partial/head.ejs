@@ -110,7 +110,7 @@
 
 
   <% if (site.data.sakura.GoogleAnalytics.token && site.data.sakura.GoogleAnalytics.token.length > 0 ){%>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161712615-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- site.data.sakura.GoogleAnalytics.token%>"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
