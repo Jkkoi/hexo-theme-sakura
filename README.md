@@ -1,10 +1,20 @@
 [原项目](https://github.com/honjun/hexo-theme-sakura)
 
+[修改版文档](https://jkkoi.top/SakuraThemeUsageGuide/) ~~~第一次打开较慢，见谅~~~
+
 作了一些修改，与原版不兼容
 使用时请注意
 
 
-2002-3-27
+v 1.0.4
+
+加入 `hexo-offline` 插件
+
+修正了一处错误的配置文件
+
+---
+
+2020-3-27
 
 支持 seo 关键词
 

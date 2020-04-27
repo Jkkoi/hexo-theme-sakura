@@ -103,3 +103,32 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+
+# sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+
+  # offline config passed to sw-precache.
+offline:
+  maximumFileSizeToCacheInBytes: 5242880
+  staticFileGlobs:
+    - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2,ico}
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdn.jsdelivr.net
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: fonts.gstatic.com
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: fonts.googleapis.com
